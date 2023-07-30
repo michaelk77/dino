@@ -123,8 +123,6 @@ async def update_message(chat_id, message_id):
         if jumping:
             # если кнопка "Jump" была нажата, перемещаем динозаврика вверх на 1 клетку
             dino_y -= 1
-            # ждем 3 секунды
-
             # сбрасываем флаг прыжка
             jumping = False
             seconds = 4
