@@ -7,6 +7,7 @@ engine = create_engine('sqlite:///game.db')
 # create base class
 Base = declarative_base()
 
+
 # create user table
 class User(Base):
     __tablename__ = 'user'
@@ -18,6 +19,7 @@ class User(Base):
     bad_cord = Column(Integer)
     bad_cord2 = Column(Integer)
     score = Column(Integer)
+
 
 # create tables
 Base.metadata.create_all(engine)

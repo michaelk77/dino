@@ -1,6 +1,8 @@
 import asyncio
 import random
-
+from sqlalchemy import create_engine, Column, Integer
+from sqlalchemy.orm import declarative_base
+from sqlalchemy.orm import sessionmaker
 from aiogram import Bot, Dispatcher, types
 from aiogram.utils import exceptions, executor
 
@@ -14,10 +16,6 @@ dp = Dispatcher(bot)
 # размеры поля
 FIELD_WIDTH = 30
 FIELD_HEIGHT = 4
-
-from sqlalchemy import create_engine, Column, Integer
-from sqlalchemy.orm import declarative_base
-from sqlalchemy.orm import sessionmaker
 
 # create engine and session
 engine = create_engine('sqlite:///game.db')
